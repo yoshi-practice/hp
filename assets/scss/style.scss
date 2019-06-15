@@ -1,4 +1,9 @@
-/* メイン */
-body {
-  overflow: hidden;
+/* 各ページで使用するCSSを記述していきます */
+
+/* トップ */
+.top-page {
+  background-color: #161922;
+  >header {
+    background-color: #161922;
+  }
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --watch --include-path scss assets/scss -o assets/css --output-style compressed",
+    "scss": "node-sass --watch --include-path scss assets/scss assets/css --output-style compressed",
     "prefix": "postcss --use autoprefixer --no-map assets/css -d assets/css",
     "test": "npm-run-all -p scss prefix"
   },

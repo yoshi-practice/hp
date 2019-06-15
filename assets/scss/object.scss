@@ -1,1 +1,25 @@
-/* 応募者__通常 */
+/* 要素を再利用できるように、要素のCSSはここに記述していきます */
+
+/* ヘッダー */
+.header-box {
+  display: flex;
+  align-items: center;
+  padding: 26px 0;
+  >.link {
+    margin-right: 30px;
+  }
+  >.link >a {
+    color: white;
+    font-size: 20px;
+  }
+  >.logo {
+    background-color: white;
+    width: 218px;
+    height: 59px;
+    text-align: center;
+    line-height: 59px;
+  }
+  >.logo >a {
+    color: black;
+  }
+}
