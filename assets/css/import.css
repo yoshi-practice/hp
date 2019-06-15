@@ -1,1 +1,50 @@
-body{overflow:hidden}
+@charset "UTF-8";
+/* 全てのページで共通して使用するCSSを記述します。 */
+body {
+  font-family: "Amiko",sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.container {
+  display: block;
+  width: calc(100% - 100px);
+  margin: 0 auto 0 auto; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+/* 要素を再利用できるように、要素のCSSはここに記述していきます */
+/* ヘッダー */
+.header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 26px 0; }
+  .header-box > .link {
+    margin-right: 30px; }
+  .header-box > .link > a {
+    color: white;
+    font-size: 20px; }
+  .header-box > .logo {
+    background-color: white;
+    width: 218px;
+    height: 59px;
+    text-align: center;
+    line-height: 59px; }
+  .header-box > .logo > a {
+    color: black; }
+
+/* 各ページで使用するCSSを記述していきます */
+/* トップ */
+.top-page {
+  background-color: #161922; }
+  .top-page > header {
+    background-color: #161922; }
