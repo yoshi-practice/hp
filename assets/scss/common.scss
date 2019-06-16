@@ -1,6 +1,10 @@
 /* 全てのページで共通して使用するCSSを記述します。 */
 body {
   font-family: "Amiko",sans-serif;
+  padding-top: 111px;
+  @media screen and (max-width: 896px) {
+    padding-top: 75px;
+  }
 }
 
 a {
@@ -19,4 +23,17 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+}
+
+/* 汎用性のあるCSS */
+
+@media screen and (max-width: 896px) {
+  .sp-none {
+    display: none!important;
+  }
 }
