@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /* 全てのページで共通して使用するCSSを記述します。 */
 body {
-  font-family: "Amiko",sans-serif; }
+  font-family: "Amiko",sans-serif;
+  padding-top: 111px; }
+  @media screen and (max-width: 896px) {
+    body {
+      padding-top: 75px; } }
 
 a {
   text-decoration: none;
@@ -18,6 +22,15 @@ header {
   left: 0;
   width: 100%; }
 
+footer {
+  width: 100%;
+  background-color: white; }
+
+/* 汎用性のあるCSS */
+@media screen and (max-width: 896px) {
+  .sp-none {
+    display: none !important; } }
+
 /* 要素を再利用できるように、要素のCSSはここに記述していきます */
 /* ヘッダー */
 .header-box {
@@ -27,10 +40,11 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 26px 0; }
+  height: 111px; }
   .header-box > .link {
-    margin-right: 30px; }
+    margin-right: 60px; }
   .header-box > .link > a {
+    white-space: nowrap;
     color: white;
     font-size: 20px; }
   .header-box > .logo {
@@ -41,6 +55,35 @@ header {
     line-height: 59px; }
   .header-box > .logo > a {
     color: black; }
+
+/* フッター */
+.footer-box {
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 123px; }
+  .footer-box > .link {
+    margin-right: 60px; }
+  .footer-box > .link > a {
+    white-space: nowrap;
+    color: #000000;
+    font-size: 20px; }
+  @media screen and (max-width: 896px) {
+    .footer-box {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 54px; }
+      .footer-box > .link {
+        margin-right: 23px; }
+      .footer-box > .link:nth-child(3) {
+        margin-right: 0; }
+      .footer-box > .link > a {
+        font-size: 10px; } }
 
 /* 各ページで使用するCSSを記述していきます */
 /* トップ */
