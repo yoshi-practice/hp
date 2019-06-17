@@ -4,21 +4,21 @@
 .header-box {
   display: flex;
   align-items: center;
-  height: 111px;
+  height: 80px;
   >.link {
     margin-right: 60px;
   }
   >.link >a {
     white-space: nowrap;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
   }
   >.logo {
     background-color: white;
-    width: 218px;
-    height: 59px;
+    width: 100px;
+    height: 50px;
     text-align: center;
-    line-height: 59px;
+    line-height: 50px;
   }
   >.logo >a {
     color: black;
@@ -30,18 +30,18 @@
   margin-top: 10px;
   display: flex;
   align-items: center;
-  height: 123px;
+  height: 80px;
   >.link {
     margin-right: 60px;
   }
   >.link >a {
     white-space: nowrap;
     color: #000000;
-    font-size: 20px;
+    font-size: 1rem;
   }
   @media screen and (max-width: 896px) {
     justify-content: center;
-    height: 54px;
+    height: 50px;
     >.link {
       margin-right: 23px;
     }
@@ -50,6 +50,186 @@
     }
     >.link >a {
       font-size: 10px;
+    }
+  }
+}
+
+/* メインビジュアル */
+.main-visual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 190px);
+  margin-left: 70px;
+  padding-bottom: 100px;
+  color: #64C1D6;
+  >.left-box >.name {
+    font-size: 5.25rem;
+  }
+  >.left-box >.copyright {
+    margin: 30px 0;
+    font-size: 2.5rem;
+  }
+  >.left-box >.desc {
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+  }
+  >.logo {
+    width: 220px;
+  }
+  @media screen and (max-width: 896px) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 140px);
+    padding-bottom: 0;
+    margin-left: 0;
+    >.left-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100vh - 480px);
+    }
+    >.left-box >.name {
+      font-size: 3.5rem;
+    }
+    >.left-box >.copyright {
+      margin: 40px 0;
+      font-size: 1.5rem;
+    }
+    >.left-box >.desc {
+      line-height: 1.5rem;
+      font-size: 1rem;
+    }
+    >.logo {
+      width: 150px;
+      height: 340px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    >.left-box {
+      height: calc(100vh - 380px);
+    }
+    >.left-box >.name {
+      font-size: 3rem;
+    }
+    >.left-box >.copyright {
+      font-size: 1.25rem;
+    }
+    >.left-box >.desc {
+      font-size: 0.875rem;
+    }
+    >.logo {
+      width: 100px;
+      height: 200px;
+    }
+  }
+}
+
+/* モーダル */
+
+
+.btn {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #64C1D6;
+  width: 80px;
+  height: 80px;
+  line-height: 1.5rem;
+  font-size: 0.5rem;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.modal-box {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  >.link li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  >#modal-btn:checked + .btn .menu-trigger {
+    span:nth-child(1) {
+      -webkit-transform: translateY(13px) rotate(-45deg);
+      transform: translateY(13px) rotate(-45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      -webkit-transform: translateY(-13px) rotate(45deg);
+      transform: translateY(-13px) rotate(45deg);
+    }
+
+  }
+  >#modal-btn:checked + .btn + .link li {
+    &:nth-child(1) a {
+      top: -70px;
+      left: -100px;
+    }
+    &:nth-child(2) a {
+      top: -120px;
+    }
+    &:nth-child(3) a {
+      top: -70px;
+      left: 100px;
+    }
+  }
+  >#modal-btn:checked + .btn + .link + .background {
+    visibility: initial;
+    opacity: 1;
+  }
+  >label {
+    z-index: 20;
+    position: relative;
+    color: black;
+    font-size: 5rem;
+  }
+  >.background {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.58);
+    transition: 0.3s;
+  }
+}
+
+
+.menu-trigger {
+  margin: auto;
+  position: relative;
+  width: 40px;
+  height: 30px;
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all .3s;
+    box-sizing: border-box;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 14px;
+    }
+    &:nth-child(3) {
+      bottom: 0;
     }
   }
 }
