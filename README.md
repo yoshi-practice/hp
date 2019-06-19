@@ -1,8 +1,10 @@
-# HEBE - HP
+# [HEBE](https://hebe.tokyo/)
 
 ---
 
 ## 開発手順
+
+下記のコマンドを実行してください。
 
 ```
 $ git clone <THIS_REPOSITORY_URL>
@@ -10,7 +12,7 @@ $ cd <THIS_REPOSITORY_NAME>
 $ npm i
 ```
 
-### SCSSコンパイル・オートプレフィックス
+### SCSSコンパイル・オートプレフィックス付与
 
 ```
 $ npm run test
@@ -22,8 +24,18 @@ $ npm run test
 $ npm run scss
 ```
 
-### オートプレフィックスのみ
+### オートプレフィックス付与のみ
 
 ```
 $ npm run prefix
 ```
+
+## デプロイなど
+
+カレントディレクトリの
+
+- `*.html`
+- `/css/*`
+- `/js/*`
+
+をサーバーにアップロードしてください。
