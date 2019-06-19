@@ -4,7 +4,10 @@ body {
   font-weight: bold;
   padding-top: 80px;
   @media screen and (max-width: 896px) {
-    padding-top: 80px;
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-top: 40px;
   }
 }
 
@@ -22,6 +25,40 @@ input {
   width: calc(100% - 100px);
   margin: 0 auto 0 auto;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+@media screen and (min-width: 1500px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 896px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+
 
 header {
   position: fixed;
@@ -43,8 +80,17 @@ footer {
   }
 }
 @media screen and (max-width: 896px) {
+  .tb-none {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 480px) {
+  .tb-pc-none {
+    display: none!important;
+  }
+}
+@media screen and (max-width: 480px) {
   .sp-none {
     display: none!important;
   }
 }
-

@@ -54,81 +54,6 @@
   }
 }
 
-/* メインビジュアル */
-.main-visual {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  width: calc(100% - 100px);
-  min-height: calc(100vh - 190px);
-  margin-left: 70px;
-  padding-bottom: 100px;
-  color: #64C1D6;
-  >.left-box >.name {
-    font-size: 5.25rem;
-  }
-  >.left-box >.copyright {
-    margin: 30px 0;
-    font-size: 2.5rem;
-  }
-  >.left-box >.desc {
-    line-height: 2.5rem;
-    font-size: 1.25rem;
-  }
-  >.logo {
-    width: 220px;
-  }
-  @media screen and (max-width: 896px) {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 140px);
-    padding-bottom: 0;
-    margin-left: 0;
-    >.left-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: calc(100vh - 480px);
-    }
-    >.left-box >.name {
-      font-size: 3.5rem;
-    }
-    >.left-box >.copyright {
-      margin: 40px 0;
-      font-size: 1.5rem;
-    }
-    >.left-box >.desc {
-      line-height: 1.5rem;
-      font-size: 1rem;
-    }
-    >.logo {
-      width: 150px;
-      height: 340px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    >.left-box {
-      height: calc(100vh - 380px);
-    }
-    >.left-box >.name {
-      font-size: 3rem;
-    }
-    >.left-box >.copyright {
-      font-size: 1.25rem;
-    }
-    >.left-box >.desc {
-      font-size: 0.875rem;
-    }
-    >.logo {
-      width: 100px;
-      height: 200px;
-    }
-  }
-}
-
 /* モーダル */
 
 
@@ -144,6 +69,10 @@
   font-size: 0.5rem;
   border-radius: 100%;
   transition: 0.3s;
+  >p {
+    text-align: center;
+    font-size: 0.5rem;
+  }
 }
 
 .modal-box {
