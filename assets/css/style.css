@@ -1,13 +1,1 @@
-@charset "UTF-8";
-/* 各ページで使用するCSSを記述していきます */
-/* トップ */
-.top-page {
-  background-color: #161922; }
-  .top-page > header {
-    background-color: #161922; }
-  .top-page > header > .header-box {
-    padding-left: 80px; }
-  .top-page > footer {
-    background-color: transparent; }
-    .top-page > footer > .footer-box > .link > a {
-      color: white; }
+.top-page{background-color:#161922}.top-page>header{background-color:#161922}.top-page>header>.header-box{padding-left:80px}.top-page>footer{background-color:transparent}.top-page>footer>.footer-box>.link>a{color:white}.main-visual{display:flex;justify-content:space-between;align-items:center;max-width:calc(600px + 50%);width:calc(100% - 100px);min-height:calc(100vh - 190px);margin-left:70px;padding-bottom:100px;color:#64C1D6}.main-visual>.left-box>.name{font-size:5.25rem}.main-visual>.left-box>.copyright{margin:30px 0;font-size:2.5rem}.main-visual>.left-box>.desc{line-height:2.5rem;font-size:1.25rem}.main-visual>.logo{width:220px}@media screen and (min-width: 1500px){.main-visual>.left-box>.name{font-size:8rem}.main-visual>.left-box>.copyright{margin:40px 0;font-size:4rem}.main-visual>.left-box>.desc{line-height:4rem;font-size:2rem}.main-visual>.logo{width:300px}}@media screen and (max-width: 896px){.main-visual{text-align:center;display:flex;flex-direction:column;width:100%;height:calc(100vh - 140px);padding-bottom:0;margin-left:0}.main-visual>.left-box{display:flex;flex-direction:column;justify-content:space-between}.main-visual>.left-box>.name{font-size:3.5rem}.main-visual>.left-box>.copyright{margin:40px 0;font-size:1.5rem}.main-visual>.left-box>.desc{line-height:1.5rem;font-size:1rem}.main-visual>.logo{width:150px;height:340px}}@media screen and (max-width: 480px){.main-visual{height:initial}.main-visual>.left-box>.name{font-size:3rem}.main-visual>.left-box>.copyright{font-size:1.25rem}.main-visual>.left-box>.desc{font-size:0.875rem}.main-visual>.logo{width:100px;height:150px}}
