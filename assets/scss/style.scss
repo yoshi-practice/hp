@@ -126,9 +126,10 @@
     margin: 0 auto;
     >.ttl {
       margin: 40px 0;
-      text-align: center;
+      text-align: left;
       @media screen and (max-width: 480px) {
         margin: 40px 0 60px 0;
+        text-align: center;
       }
     }
     @media screen and (max-width: 896px) {
@@ -175,5 +176,186 @@
 
   @media screen and (max-width: 480px) {
     margin-bottom: 20px;
+  }
+}
+
+/* インフォメーション */
+
+.info-page {
+  @extend .member-page;
+  background-color: white;
+  >header {
+    background-color: white;
+    >.header-box >.link a {
+      color: #000;
+    }
+    >.header-box >.logo {
+      background-color: black;
+      a {
+        color: white;
+      }
+    }
+  }
+  >footer {
+    background-color: white;
+    >.footer-box >.link > a {
+      color: black;
+    }
+  }
+
+
+  >section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    max-width: 100%;
+  }
+
+  >.about-box {
+    color: black;
+    padding: 20px 0 40px 0;
+    >p {
+      margin-top: 20px;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+  }
+
+  >.brand-box {
+    padding: 50px 0;
+    background-color: #F0F0F0;
+    >.logo {
+      margin-top: 50px;
+    }
+    >.name {
+      margin: 10px 0 20px 0;
+    }
+    >.desc {
+      line-height: 1.25;
+      font-weight: normal;
+    }
+  }
+
+  >.intro-box {
+    display: flex;
+    flex-direction: initial;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 50px 0;
+    >img {
+      width: 300px;
+      margin-right: 60px;
+    }
+    >.txt {
+      width: 300px;
+      margin-left: 60px;
+      p {
+        white-space: nowrap;
+        margin-top: 20px;
+        line-height: 1.75;
+        font-weight: normal;
+      }
+    }
+    @media screen and (min-width: 1500px) {
+      >img {
+        width: 500px;
+      }
+      >.txt {
+        width: 500px;
+      }
+    }
+    @media screen and (max-width: 896px) {
+      display: block;
+      text-align: center;
+      >img {
+        max-width: 250px;
+        margin: initial!important;
+      }
+      >.txt {
+        h4 {
+          margin-top: 30px;
+        }
+        width: 100%;
+        margin: initial;
+      }
+    }
+  }
+  >.gray {
+    background-color: #F0F0F0;
+  }
+  >.reverse {
+    flex-flow: row-reverse;
+    >img {
+      margin-left: 60px;
+    }
+    >.txt {
+      margin-right: 60px;
+    }
+  }
+  >.recruit-box {
+    padding: 50px 0;
+    background-color: #161922;
+    color: #64C1D6;
+
+    >.recruit-btn {
+      margin-top: 30px;
+      width: 200px;
+      height: 50px;
+      background-color: #64C1D6;
+      border-radius: 100px;
+      a {
+        color: white;
+        line-height: 50px;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      padding: 100px 0;
+      >.recruit-btn {
+        margin-top: 60px;
+        width: 300px;
+        height: 80px;
+        a {
+          line-height: 80px;
+        }
+      }
+    }
+  }
+  >.company-box {
+    padding: 50px 0;
+  }
+  >.company-box >.company-table {
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.8;
+    padding: 20px 40px 10px 40px;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    border-spacing: 1115px;
+    >tbody > tr {
+      padding-bottom: 10px;
+    }
+    .company-head {
+      >.left {
+        width: 100px;
+      }
+    }
+    @media screen and (max-width: 896px) {
+      max-width: 250px;
+      width: calc(100vw - 130px);
+      padding: 20px 30px 10px 30px;
+      margin: 0 auto 80px auto;
+
+      .company-head {
+        >.left {
+          width: 70px;
+        }
+      }
+    }
   }
 }
