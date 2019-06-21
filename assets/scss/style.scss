@@ -142,6 +142,9 @@
     right: 0;
     left: 0;
     margin: auto;
+    @media screen and (max-width: 896px) {
+      bottom: 60px;
+    }
   }
 }
 
@@ -355,6 +358,87 @@
         >.left {
           width: 70px;
         }
+      }
+    }
+  }
+}
+/* コンタクト */
+
+.contact-page {
+  @extend .member-page;
+  color: #64C1D6;
+  >.container >.ttl {
+    text-align: center;
+  }
+  >.contact-box {
+    min-height: calc(100vh - 350px);
+    >.desc {
+      margin-top: 50px;
+      line-height: 2;
+      text-align: center;
+    }
+    >.contact-list {
+      display: flex;
+      justify-content: space-between;
+      background-color: #363B4A;
+      margin: 90px auto 140px auto;
+      padding: 60px;
+      width: 580px;
+      border-radius: 50px;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+
+        img {
+          height: 60px;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+      }
+      @media screen and (max-width: 896px) {
+        margin: 60px auto 40px auto;
+        padding: 20px;
+        width: calc(100% - 80px);
+        border-radius: 30px;
+        li {
+          width: calc(50% - 80px);
+          height: 60px;
+          padding: 30px;
+          img {
+            height: 40px;
+            margin-bottom: 15px;
+            &:first-child {
+              width: 40px;
+            }
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 896px) {
+    >.contact-box {
+
+      min-height: calc(100vh - 240px);
+
+      >.modal-box {
+        margin: auto;
       }
     }
   }
