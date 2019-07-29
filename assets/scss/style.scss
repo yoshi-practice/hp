@@ -161,10 +161,18 @@
 
 .member-box {
   margin-bottom: 50px;
-  >img {
+  >.icon {
+    overflow: hidden;
     width: calc((100vw - 220px) / 3);
+    height: calc((100vw - 220px) / 6);
     @media screen and (max-width: 896px) {
       width: calc((100vw - 120px) / 2);
+      height: calc((100vw - 220px) / 3);
+    }
+    >img {
+      width: 100%;
+      min-width: calc((100vw - 220px) / 3);
+      min-height: 100px;
     }
   }
   >.profile {
