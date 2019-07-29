@@ -176,7 +176,9 @@
   >.profile >h3 {
     margin-bottom: 5px;
   }
-
+  >.tb-pc-none {
+    border-radius: 100px;
+  }
   @media screen and (max-width: 480px) {
     margin-bottom: 20px;
   }
@@ -187,18 +189,6 @@
 .info-page {
   @extend .member-page;
   background-color: white;
-  >header {
-    background-color: white;
-    >.header-box >.link a {
-      color: #000;
-    }
-    >.header-box >.logo {
-      background-color: black;
-      a {
-        color: white;
-      }
-    }
-  }
   >footer {
     background-color: white;
     >.footer-box >.link > a {
